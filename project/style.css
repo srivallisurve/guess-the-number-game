@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.game-container {
+    width: 100%;
+    max-width: 500px;
+}
+
+.game-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.game-content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.message {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    color: #495057;
+    border-left: 4px solid #667eea;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.message.success {
+    background: #d4edda;
+    color: #155724;
+    border-left-color: #28a745;
+}
+
+.message.error {
+    background: #f8d7da;
+    color: #721c24;
+    border-left-color: #dc3545;
+}
+
+.input-section {
+    display: flex;
+    gap: 12px;
+}
+
+#guessInput {
+    flex: 1;
+    padding: 15px 20px;
+    border: 2px solid #e9ecef;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+#guessInput:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+#submitBtn {
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#submitBtn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+#submitBtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.attempts {
+    font-size: 1.1rem;
+    color: #666;
+    font-weight: 500;
+}
+
+#attemptCount {
+    color: #667eea;
+    font-weight: 700;
+}
+
+#newGameBtn {
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #28a745, #20c997);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#newGameBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(40, 167, 69, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .game-card {
+        padding: 30px 20px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .input-section {
+        flex-direction: column;
+    }
+    
+    #submitBtn {
+        padding: 15px;
+    }
+}
