@@ -3,9 +3,6 @@ A simple and fun terminal-based game built with Python where the computer picks 
 
 🕹️ How to Play
 The computer randomly selects a number between 1 and 100.
-
 You have to guess the number in as few attempts as possible.
-
 After each guess, the game will tell you whether your guess was too high, too low, or correct.
-
 Once guessed, it displays the number of attempts and gives you the option to play again.
